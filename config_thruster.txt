@@ -1,0 +1,17 @@
+#Document Commands
+!PRODUCT,Configure Thruster
+!VERSION,1.00.00
+!DOC_TYPE,Operator's Manual
+!OUT_DIR,config_thruster/
+!INCLUDED_PAGES,
+!EXCLUDED_PAGES,
+!VALID_TEXT,
+!TEMPLATE_COVER,required/htm/template_index_print.htm,index_print.htm
+
+#Documentation Generation
+!INCLUDE,required/intro_.txt,1
+!INCLUDE,required/overview_.txt,1
+
+*,Use
+*,Configuration
+*,OS Notes

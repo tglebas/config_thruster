@@ -1,0 +1,34 @@
+<h1>Configuration</h1>
+
+<p>The application reads configuration values (except the log configuration) from the following files:</p>
+
+<ul>
+  <li> User and application specific settings.
+    <ul>
+      <li>Windows: <span class="folder">C:\Users\{User Name}\AppData\Roaming\VideoRay\thruster_config.ini</span></li>
+      <li>Linux: <span class="folder">$HOME/.config/VideoRay/thruster_config.ini</span></li>
+      </ul>
+    </li>
+  <li>User specific settings for all VideoRay applications.
+    <ul>
+      <li>Windows: <span class="folder">C:\Users\{User Name}\AppData\Roaming\VideoRay.ini</span></li>
+      <li>Linux: <span class="folder">$HOME/.config/VideoRay.ini</span></li>
+      </ul>
+    </li>
+  <li>Common application specific settings.
+    <ul>
+      <li>Windows: <span class="folder">C:\ProgramData\VideoRay\thruster_config.ini</span></li>
+      <li>Linux: <span class="folder">/etc/xdg/VideoRay/thruster_config.ini</span></li>
+      </ul>
+    </li>
+  <li>Common settings shared by all VideoRay applications.
+    <ul>
+      <li>Windows: <span class="folder">C:\ProgramData\VideoRay.ini</span></li>
+      <li>Linux: <span class="folder">/etc/xdg/VideoRay.ini</span></li>
+      </ul>
+    </li>
+  </ul>
+
+<p>Any changes that the application makes to the configuration values will be written to the user and application specific settings file. The other files can be used to override the default value(s).</p>
+
+<p>The "default.ini" file contains the default values for all of the settings.  See the --setup_ini command line option.</p>

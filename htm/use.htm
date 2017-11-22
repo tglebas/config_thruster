@@ -1,0 +1,96 @@
+<h1>Use</h1>
+
+
+<p>The application supports the following command line options (in order of
+precedence):</p>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Shortcut</th>
+    <th>Parameter</th>
+    <th>Brief Description</th>
+    </tr>
+  <tr>
+    <td>help</td>
+    <td>h</td>
+    <td></td>
+    <td>Show the usage message</td>
+    </tr>
+  <tr>
+    <td>version</td>
+    <td>v</td>
+    <td></td>
+    <td>how the version information</td>
+    </tr>
+  <tr>
+    <td>port</td>
+    <td>p</td>
+    <td>Port Name</td>
+    <td>Active serial port</td>
+    </tr>
+  <tr>
+    <td>log_configuration</td>
+    <td>c</td>
+    <td>File Name</td>
+    <td>Log configuration file</td>
+    </tr>
+  <tr>
+    <td>minimum_level</td>
+    <td>l</td>
+    <td>Level Name</td>
+    <td>Send log messages to the console and specify the minimum message level</td>
+    </tr>
+  <tr>
+    <td>show_port</td>
+    <td></td>
+    <td></td>
+    <td>Show the on screen serial port</td>
+    </tr>
+  <tr>
+    <td>show_status</td>
+    <td></td>
+    <td></td>
+    <td>Show the on screen thruster interface status.</td>
+    </tr>
+  <tr>
+    <td>setup_ini</td>
+    <td></td>
+    <td>File Name</td>
+    <td>Generate a template configuration (INI), file populated with default values</td>
+    </tr>
+  <tr>
+    <td>setup_log</td>
+    <td></td>
+    <td>File Name</td>
+    <td>Generate a template log configuration file, populated with suggested values.</td>
+    </tr>
+  <tr>
+    <td>emulate</td>
+    <td>e</td>
+    <td>Boolean</td>
+    <td>Emulate hardware</td>
+    </tr>
+  </table>
+    
+<h3>Help and Version Options</h3>
+<p>The "help" and "version" options terminate the program after their messages are displayed. The "help" option displays a usage message and the locations that will be searched for the log configuration file. The "version" option will display "version" information for the application.</p>
+
+<h3>Port Option</h3>
+</p>The "port" option controls the serial port used to communicate with the thrusters. If neither this option nor the "[default_options] port" configuration setting is provided, or if the supplied value is invalid, the default serial port is the first (in alphabetic order) serial port. Whenever the active serial port is changed, the new serial port will be written to the "[default_options] port" setting so that it becomes the default the next time the application is run.</p>
+
+<h3>On Screen Display Options </h3>
+</p>The "show_port" option toggles if the active serial port is displayed the main window. The "show_status" option toggles if the thruster interface status is displayed on the main window.</p>
+
+<h3>Setup Options</h3>
+<p>The "setup_ini" and "setup_log" options direct all log messages to the console and terminate the program after the template file(s) are generated. The file that the "setup_ini" option generates contains all of the settings populated with their default values. The file that the "setup_log" option generates contains definitions for common logging appenders and layouts in addition to all of the loggers, populated with suggested default values.</p>
+
+<h3>Logging Options</h3>
+</p>Only one of the "log_configuration" and "minimum_level" options should occur on the command line. If no logging options occur on the command line, the default log configuration file will be used if it exist, otherwise log messages will be sent to the console.</p>
+
+If the name of the log configuration file does not begin with a slash (or drive letter and slash on Microsoft Windows), the program will search for the log configuration file and will use the first one it locates. See the "help" option message for the locations that will be searched.</p>
+
+<h3>Emulation Option</h3>
+</p>The "emulate" option controls if the application emulates the hardware using the settings in the [emulation_delays], [emulation_formulas], [emulation_serial_ports], and [emulation_thrusters] sections of the configuration files.</p>
+
+

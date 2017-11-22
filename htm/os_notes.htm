@@ -1,0 +1,28 @@
+<h1>OS Notes</h1>
+
+<h2>Supported Environments</h2>
+
+<p>This tool is supported in the following environments:</p>
+<ul>
+  <li>Windows 7</li>
+  <li>Windows 10</li>
+  <li>Ubuntu 14.04 LTS</li>
+  <li>Ubuntu 16.04 LTS</li>
+  </ul>
+
+<h2>Notes</h2>
+<ul>
+  <li>Under Ubuntu, ensure the user is in the dialout group.
+    <p class="folder">sudo usermod -a -G dialout $USER</p>
+  <li>Under Ubuntu, the "libstdc++.so.6" file is only needed for 14.04 LTS.</li>
+  <li>Ensure that the directories that the log configuration file refers to</li>
+  exist because the logging system silently discards log messages if the destination directory does not exist.</li>
+  <li>Under Windows, there is a known problem with accessing the serial port.  To work around the problem perform either of the following. This only
+  needs to be performed once after rebooting or attaching the USB serial port.
+    <ul>
+      <li>Use a third party application (e.g. PuTTY, Realterm, or Tera Term) to open the serial port.</li>
+      <li>Execute the supplied python script (windows\serialPort.py)
+      <p class="folder">python serialPort.py</p></li>
+      </ul>
+   </li>
+  </ul>
